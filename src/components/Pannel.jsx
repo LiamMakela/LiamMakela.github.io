@@ -21,7 +21,7 @@ function Pannel({ setWindowAboutOpen,  setWindowOpen, setWindowMailOpen, setWind
 
           <div className="grid grid-cols-4 gap-16">
             <WindowButton onClick={setWindowAboutOpen} text = {"About"} Icon = {Questionsvg}/>
-            <WindowButton onClick={setWindowOpen} text = {"Github"} Icon = {GitHubsvg}/>
+            <WindowButton onClick={() => {window.open('https://github.com/LiamMakela', '_blank', 'noopener noreferrer'); }} text = {"Projects"} Icon = {GitHubsvg}/>
             <WindowButton onClick={setWindowMailOpen} text = {"Mail"} Icon = {Mailsvg}/>
             <WindowButton onClick={setWindowLinksOpen} text = {"Links"} Icon = {Linksvg}/>
           </div>
