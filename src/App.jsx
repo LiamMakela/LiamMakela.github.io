@@ -37,7 +37,7 @@ export default function App() {
               setWindowLinksOpen={setWindowLinksOpen}
               />
 
-      <Window open={windowAboutOpen} closeWindow={() => setWindowAboutOpen(false)} Content={About} width={320} height={410}/>
+      <Window open={windowAboutOpen} closeWindow={() => setWindowAboutOpen(false)} Content={About} width={320} height={430}/>
       <Window open={windowMailOpen} closeWindow={() => setWindowMailOpen(false)} Content={Mail}/>
       <Window open={windowLinksOpen} closeWindow={() => setWindowLinksOpen(false)} Content={Links}/>
 

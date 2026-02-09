@@ -3,7 +3,7 @@ import portrait from "../assets/portrait_10.webp";
 function About() {
 
   return (
-    <div className ="w-full h-full grid grid-cols-12 grid-rows-12 gap-x-1 p-y-10 "> 
+    <div className ="w-full h-full grid grid-cols-12 grid-rows-12 gap-x-1 pt-5 pb-2"> 
       
       <div className = " col-start-1 col-end-7 row-start-1 row-end-9">
         <p className=" font-serif text-left text-sm">
