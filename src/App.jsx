@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Window from "./components/Window.jsx";
 import Forestsvg from "./assets/Asset5.svg?react";
 import BgLayer from "./components/BgLayer.jsx";
@@ -6,6 +6,8 @@ import Pannel from "./components/Pannel.jsx";
 import About from "./components/About.jsx";
 import Mail from "./components/Mail.jsx";
 import Links from "./components/Links.jsx";
+
+
 
 
 export default function App() {
@@ -16,7 +18,14 @@ export default function App() {
   const [svgHover, setSvgHover] = useState(false);
   const [mouse, setMouse] = useState({ x: 0, y: 0 });
 
+  useEffect(() => {
+    if ("ontouchstart" in window || navigator.maxTouchPoints > 0) {
+      alert("This site is best experienced on desktop.");
+    }
+  }, []);
+
   return (
+    
     <div className="relative w-screen h-screen overflow-hidden"
       onMouseMove={(e) => {
       if ("ontouchstart" in window) return;
