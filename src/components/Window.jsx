@@ -14,7 +14,7 @@ function Window({ open , Content, closeWindow, width, height}) {
         className={`absolute z-30 bg-[#F5F5F5] p-4 cursor-move shadow-xl`}
       >
         <Content/>
-         <button onClick = {closeWindow} className="absolute top-0.5 right-0.5  text-white rounded w-7 h-7">
+         <button onClick = {closeWindow} className="cursor-pointer absolute top-0.5 right-0.5  text-white rounded w-7 h-7">
           <XSymbolSvg className = " w-3/4 h-3/4 pointer-events-auto hover:transition-linear fill-[#00A36D] hover:fill-[#01744d]"/>
         </button>
       </div>
