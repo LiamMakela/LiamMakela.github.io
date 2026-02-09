@@ -6,7 +6,7 @@ function About() {
     <div className ="w-full h-full grid grid-cols-12 grid-rows-12 gap-x-1 pt-5 pb-2"> 
       
       <div className = " col-start-1 col-end-7 row-start-1 row-end-9">
-        <p className=" font-serif text-left text-sm">
+        <p className=" font-serif text-left text-xs sm:text-sm">
           I am Liam Makela, <br></br>
           a student at the University of Nebraksa Lincoln, 
           a Computer Science and Mathematics dual major, the assistant editor at the DailyER Nebraksan, 
@@ -19,7 +19,7 @@ function About() {
       </div>
 
       <div className = "col-start-1 col-end-13 row-start-9 row-end-13">
-        <p className=" font-serif text-left text-sm">
+        <p className=" font-serif text-left text-xs sm:text-sm ">
           I work well in teams, check my email often, and am open and interested in research
           or internship oportunities happening summer of 2026. I am available for opportunities around both
           Lincoln NE and Lake Villa IL, and am set to graduate May 2028.
