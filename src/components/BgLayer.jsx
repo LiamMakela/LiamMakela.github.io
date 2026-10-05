@@ -1,5 +1,5 @@
-import forest from "../assets/forest.png";
-import mountain from "../assets/mountain2.png";
+import forest from "../assets/forest.webp";
+import mountain from "../assets/mountain2.webp";
 
 function BgLayer({ svgHover, mouse }) {
   return (
