@@ -1,15 +1,28 @@
+import { createElement } from "react";
 
-function WindowButton({ onClick,  text, Icon}) {
-
+function WindowButton({ onClick, text, IconComponent }) {
   return (
     <button
-        onClick={ onClick }
-        className="pointer-events-auto"
+      type="button"
+      onClick={onClick}
+      className="
+        pointer-events-auto
+        flex
+        flex-col
+        items-center
+        gap-1
+        cursor-pointer
+        group
+      "
     >
-        <Icon className = "pointer-events-auto hover:transition-linear hover:fill-[#00A36D] hover:scale-110"/>
-        {text}
+      {createElement(IconComponent, {
+        className:
+          "w-12 h-12 transition-transform duration-150 group-hover:fill-[#00A36D] group-hover:scale-110",
+      })}
+
+      <span>{text}</span>
     </button>
   );
 }
 
-export default WindowButton
+export default WindowButton;
