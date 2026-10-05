@@ -28,7 +28,7 @@ function Window({
 
   return (
     <Draggable
-      cancel=".no-drag"
+      handle=".drag-handle"
       bounds="parent"
       nodeRef={nodeRef}
       defaultPosition={{
@@ -46,42 +46,58 @@ function Window({
           absolute
           z-30
           bg-[#F5F5F5]
-          p-5
-          cursor-move
           shadow-xl
-          overflow-auto
+          overflow-hidden
         "
       >
-        <div className="no-drag h-full">
-          {children}
-        </div>
-
-        <button
-          type="button"
-          onClick={closeWindow}
-          aria-label="Close window"
+        <div
           className="
-            no-drag
-            cursor-pointer
-            absolute
-            top-2
-            right-2
-            w-7
-            h-7
-            flex
-            items-center
-            justify-center
+            drag-handle
+            h-9
+            cursor-move
+            border-b
+            border-gray-300
+            bg-gray-100
           "
         >
-          <XSymbolSvg
+          <button
+            type="button"
+            onClick={closeWindow}
+            aria-label="Close window"
             className="
-              w-5
-              h-5
-              fill-[#00A36D]
-              hover:fill-[#01744d]
+              absolute
+              top-1
+              right-1
+              w-7
+              h-7
+              flex
+              items-center
+              justify-center
+              cursor-pointer
             "
-          />
-        </button>
+          >
+            <XSymbolSvg
+              className="
+                w-5
+                h-5
+                fill-[#00A36D]
+                hover:fill-[#01744d]
+              "
+            />
+          </button>
+        </div>
+
+        <div
+          className="
+            p-5
+            overflow-auto
+          "
+          style={{
+            height: "calc(100% - 2.25rem)",
+          }}
+        >
+          {children}
+        </div>
       </div>
     </Draggable>
   );
